@@ -30,11 +30,28 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>tools</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <modules>
         <module>../tools-core</module>
         <module>../tools-orm</module>
         <module>../tools-utils</module>
         <module>../tools-view</module>
     </modules>
+
+
     
 </project>

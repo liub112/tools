@@ -7,6 +7,7 @@
         <artifactId>tools-parent</artifactId>
         <groupId>com.lfxfs</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../tools-parent</relativePath>
     </parent>
     <artifactId>tools-view</artifactId>
     <version>1.0-SNAPSHOT</version>
