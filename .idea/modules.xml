@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tools-core/tools-core.iml" filepath="$PROJECT_DIR$/tools-core/tools-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools-orm/tools-orm.iml" filepath="$PROJECT_DIR$/tools-orm/tools-orm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools-parent/tools-parent.iml" filepath="$PROJECT_DIR$/tools-parent/tools-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools-utils/tools-utils.iml" filepath="$PROJECT_DIR$/tools-utils/tools-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools-view/tools-view.iml" filepath="$PROJECT_DIR$/tools-view/tools-view.iml" />
+    </modules>
+  </component>
+</project>
