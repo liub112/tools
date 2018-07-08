@@ -164,9 +164,9 @@ public class Generator {
              *Instantiation Instantiation a StringBuffer in order to handle
              * Generic class data
              */
-            writer=new BufferedWriter(new FileWriter(f));
-
-
+            writer=new BufferedWriter(
+                    new OutputStreamWriter(
+                            new FileOutputStream(f), "UTF-8"));
             writer.write(filePage.getFileContent().toString());
             writer.close();
             System.out.println("File["+classStr+"] is created.");
