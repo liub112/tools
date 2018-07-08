@@ -14,11 +14,11 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="tools" target="1.5" />
-      <module name="tools-core" target="1.5" />
-      <module name="tools-orm" target="1.5" />
-      <module name="tools-parent" target="1.5" />
-      <module name="tools-utils" target="1.5" />
-      <module name="tools-view" target="1.5" />
+      <module name="tools-core" target="1.7" />
+      <module name="tools-orm" target="1.7" />
+      <module name="tools-parent" target="1.7" />
+      <module name="tools-utils" target="1.7" />
+      <module name="tools-view" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
