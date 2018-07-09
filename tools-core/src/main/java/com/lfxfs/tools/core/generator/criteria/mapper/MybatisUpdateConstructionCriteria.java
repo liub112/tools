@@ -13,27 +13,27 @@ public class MybatisUpdateConstructionCriteria implements ConstructionCriteria {
         if(ENU!= CRITERIA_ORM_ENUM.CRITERIA_ORM_ENUM_METHOD_UPDATE) return null;
 
         StringBuffer sb = new StringBuffer();
-        sb.append("  <update id=\""+methodName
+        sb.append("\t<update id=\""+methodName
                 +"\" parameterType=\""+parameterType+"\">\n")
-                .append("    update "+table.getTableName()+"\n")
-                .append("        <set>\n");
+                .append("\t\tupdate "+table.getTableName()+"\n")
+                .append("\t\t<set>\n");
         for (Field field:table.getFields())  {
-            sb.append("           <if test=\""+ StringUtils.underlineToCamel(field.getField())+" != null\">,\n")
-                    .append("             "+field.getField()+"\n")
-                    .append("           </if>\n");
+            sb.append("\t\t\t<if test=\""+ StringUtils.underlineToCamel(field.getField())+" != null\">,\n")
+                    .append("\t\t\t\t"+field.getField()+"\n")
+                    .append("\t\t\t</if>\n");
         }
 
-        sb.append("        </set>\n")
-                .append("    where\n")
-                .append("        <trim prefixOverrides=\",\">\n");
+        sb.append("\t\t</set>\n")
+                .append("\t\twhere\n")
+                .append("\t\t<trim prefixOverrides=\",\">\n");
 
         for (Field field:table.getFields())  {
-            sb.append("           <if test=\""+StringUtils.underlineToCamel(field.getField())+" != null\">,\n")
-                    .append("             #{"+StringUtils.underlineToCamel(field.getField())+",jdbcType="+ Constant.JDBC_TYPE_CONVERSION_TRANSFER.get(field.getDataType())+"}\n")
-                    .append("           </if>\n");
+            sb.append("\t\t\t<if test=\""+StringUtils.underlineToCamel(field.getField())+" != null\">,\n")
+                    .append("\t\t\t\t#{"+StringUtils.underlineToCamel(field.getField())+",jdbcType="+ Constant.JDBC_TYPE_CONVERSION_TRANSFER.get(field.getDataType())+"}\n")
+                    .append("\t\t\t</if>\n");
         }
-        sb.append("        </trim>\n");
-        sb.append("  </update>\n\n");
+        sb.append("\t\t</trim>\n");
+        sb.append("\t</update>\n\n");
         return sb.toString();
     }
 }

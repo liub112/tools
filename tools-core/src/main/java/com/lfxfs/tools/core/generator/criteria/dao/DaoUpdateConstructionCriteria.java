@@ -11,10 +11,10 @@ public class DaoUpdateConstructionCriteria implements ConstructionCriteria {
         if(ENU!= CRITERIA_ORM_ENUM.CRITERIA_ORM_ENUM_METHOD_UPDATE) return null;
 
         StringBuffer sb = new StringBuffer();
-        sb.append("    /**\n" +
-                "     *更新"+table.getComments()+"表\n" +
-                "     */\n")
-                .append("    public  void "+methodName+"(" +
+        sb.append("\t/**\n" +
+                "\t *更新"+table.getComments()+"表\n" +
+                "\t */\n")
+                .append("\tpublic  void "+methodName+"(" +
                         StringUtils.underlineToCamel3(table.getTableName())+" "+StringUtils.underlineToCamel(table.getTableName())
                         +");\n")
                 .append(" ");

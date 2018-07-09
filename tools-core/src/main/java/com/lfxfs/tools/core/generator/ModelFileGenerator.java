@@ -48,16 +48,16 @@ public class ModelFileGenerator extends AbstractFileGenerator {
                             " *@author "+ NetWorkUtils.getHostName()+"\n" +
                             " */\n")
                     .append("public class ").append(className).append(" implements Serializable{\n")
-                    .append("    /**\n")
-                    .append("     * serialVersionUID\n" +
-                            "     */\n")
-                    .append("    private static final long serialVersionUID = ")
+                    .append("\t/**\n")
+                    .append("\t * serialVersionUID\n" +
+                            "\t*/\n")
+                    .append("\tprivate static final long serialVersionUID = ")
                     .append(random.nextLong()).append("L;\n");
             for (Field field:table.getFields()) {
-                sb.append("    /**\n" +
-                        "     * "+field.getFieldComments().replaceAll("\\n","\n     *")+"\n" +
-                        "     */\n")
-                        .append("    private ")
+                sb.append("\t/**\n" +
+                        "\t * "+field.getFieldComments().replaceAll("\\n","\n     *")+"\n" +
+                        "\t */\n")
+                        .append("\tprivate ")
                         .append(field.getDataType())
                         .append(" ")
                         .append(StringUtils.underlineToCamel(field.getField())+";\n");
@@ -65,22 +65,22 @@ public class ModelFileGenerator extends AbstractFileGenerator {
             }
 
             for (Field field:table.getFields()) {
-                sb.append("    /**\n" +
-                        "     * Gets the value of "+ field.getFieldComments().replaceAll("\\n","\n     *") +"\n"+
-                        "     * @return the value of "+ field.getFieldComments().replaceAll("\\n","\n     *") +"\n" +
-                        "     */\n")
-                        .append("     public "+ field.getDataType()
+                sb.append("\t/**\n" +
+                        "\t * Gets the value of "+ field.getFieldComments().replaceAll("\\n","\n     *") +"\n"+
+                        "\t * @return the value of "+ field.getFieldComments().replaceAll("\\n","\n     *") +"\n" +
+                        " \t */\n")
+                        .append("\tpublic "+ field.getDataType()
                                 +" get"+ StringUtils.underlineToCamel3(field.getField()) +"() {\n")
-                        .append("        return "+ StringUtils.underlineToCamel(field.getField()) +";\n")
-                        .append("     }\n")
-                        .append("    /**\n" +
-                                "     * Sets the value of "+ field.getFieldComments().replaceAll("\\n","\n     *") +"        \n" +
-                                "     */\n")
-                        .append("     public void set"+ StringUtils.underlineToCamel3(field.getField())
+                        .append("\t\treturn "+ StringUtils.underlineToCamel(field.getField()) +";\n")
+                        .append("\t}\n")
+                        .append("\t/**\n" +
+                                "\t * Sets the value of "+ field.getFieldComments().replaceAll("\\n","\n     *") +"        \n" +
+                                "\t */\n")
+                        .append("\tpublic void set"+ StringUtils.underlineToCamel3(field.getField())
                                 +"("+ field.getDataType() +" "+ StringUtils.underlineToCamel(field.getField()) +") {\n")
-                        .append("        this."+ StringUtils.underlineToCamel(field.getField())
+                        .append(" \t\tthis."+ StringUtils.underlineToCamel(field.getField())
                                 +" = "+ StringUtils.underlineToCamel(field.getField()) +";\n")
-                        .append("     }")
+                        .append("\t}")
                         .append("\n");
             }
             sb.append("}");
