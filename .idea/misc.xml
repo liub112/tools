@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/tools-parent/pom.xml" />
         <option value="$PROJECT_DIR$/tools-view/pom.xml" />
+        <option value="$PROJECT_DIR$/tools-pattern/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

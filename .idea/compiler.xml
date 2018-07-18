@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tools-core" />
         <module name="tools-orm" />
+        <module name="tools-pattern" />
         <module name="tools-utils" />
         <module name="tools-view" />
       </profile>
@@ -17,6 +18,7 @@
       <module name="tools-core" target="1.7" />
       <module name="tools-orm" target="1.7" />
       <module name="tools-parent" target="1.7" />
+      <module name="tools-pattern" target="1.7" />
       <module name="tools-utils" target="1.7" />
       <module name="tools-view" target="1.7" />
     </bytecodeTargetLevel>
