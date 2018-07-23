@@ -1,11 +1,12 @@
 package com.lfxfs.tools.pattern.adapter;
 
+import org.junit.Test;
+
 public class AudioPlayTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void testMedisPlay(){
         IMediaPlay mediaPlay = new AudioPlay();
         mediaPlay.play("mp4","青青子衿");
-
     }
-
 }

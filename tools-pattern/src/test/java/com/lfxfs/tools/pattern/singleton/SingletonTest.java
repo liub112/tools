@@ -1,11 +1,14 @@
 package com.lfxfs.tools.pattern.singleton;
 
 
+import org.junit.Test;
+
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class SingletonTest {
-    public static void main(String[] args) {
+    @Test
+    public  void testSingleton() {
         Executor executor = Executors.newFixedThreadPool(20);
         for (int i = 0; i < 1000; i++) {
             executor.execute(new Runnable(){

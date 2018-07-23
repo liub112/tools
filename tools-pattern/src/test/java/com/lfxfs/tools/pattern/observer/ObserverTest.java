@@ -11,7 +11,10 @@ public class ObserverTest {
         MamaObserver mamaObserver = new MamaObserver();
         subject.addObserver(baBaObserver);
         subject.addObserver(mamaObserver);
-        subject.doSomething();
+        for (int i = 0; i <20 ; i++) {
+            subject.doSomething();
+        }
+        System.out.println("I'm finished!");
     }
 
 

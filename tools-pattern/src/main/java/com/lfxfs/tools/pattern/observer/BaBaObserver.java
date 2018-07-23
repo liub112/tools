@@ -16,6 +16,6 @@ public class BaBaObserver implements Observer {
     @Override
     public void update(Observable o, Object arg) {
         String content = (String) arg;
-        System.out.println("baba lisenter:"+content);
+        System.out.println(Thread.currentThread().getName()+":baba lisenter:"+content);
     }
 }

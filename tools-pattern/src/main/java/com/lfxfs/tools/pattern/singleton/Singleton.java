@@ -1,6 +1,8 @@
 package com.lfxfs.tools.pattern.singleton;
 
-public class Singleton {
+import java.io.Serializable;
+
+public class Singleton implements Serializable{
 
     private Singleton() {}
 
@@ -14,6 +16,11 @@ public class Singleton {
 
     public void doSomething(){
         System.out.println("I'm a Singleton class");
+    }
+
+
+    private Object readResolve(){
+        return SingletonHandler.INSTANCE;
     }
 
 }
